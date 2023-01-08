@@ -2,22 +2,28 @@
 
 ## Setup & Installtion
 
-Make sure you have the latest version of Python installed.
+Make sure you have the latest version of Docker installed.
+
+Clone the repo:
 
 ```bash
 git clone <repo-url>
 ```
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Running The App
 
+Build the image:
+
 ```bash
-python main.py
+docker built -t myapp .
 ```
+
+Run the container:
+
+```bash
+docker run -d -p 8000:8000
+```
+
 
 ## Viewing The App
 
-Go to `http://127.0.0.1:5000`
+Go to `http://127.0.0.1:8000`
